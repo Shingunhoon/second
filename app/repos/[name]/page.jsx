@@ -1,9 +1,7 @@
-import Repo from "@/app/components/repo"
-import RepoDirs from "@/app/components/repoDirs"
-
+import Repo from "@/components/Repo"
+import RepoDirs from "@/components/RepoDirs"
 import Link from "next/link"
 import { Suspense } from "react"
-
 const RepoPage = ({ params: { name } }) => {
   return (
     <div className="flex flex-col justify-start items-start max-w-lg">
@@ -13,7 +11,6 @@ const RepoPage = ({ params: { name } }) => {
       >
         Back to Repositories
       </Link>
-
       <Suspense fallback={<div>Loading repo...</div>}>
         <Repo name={name} />
       </Suspense>
